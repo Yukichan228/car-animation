@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Машинка</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #bde8ff;
+}
+
+.car {
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    bottom: 80px;
+    left: -200px;
+    animation: drive 4s ease-out forwards;
+}
+
+.body {
+    position: absolute;
+    width: 200px;
+    height: 45px;
+    bottom: 15px;
+    background: #e53935;
+    border-radius: 20px 35px 10px 10px;
+}
+
+.roof {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    bottom: 50px;
+    left: 45px;
+    background: #e53935;
+    border-radius: 45px 45px 0 0;
+}
+
+.window {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    bottom: 52px;
+    left: 52px;
+    background: #bde8ff;
+    border-radius: 25px 5px 0 0;
+}
+
+.window2 {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    bottom: 52px;
+    left: 105px;
+    background: #bde8ff;
+    border-radius: 5px 25px 0 0;
+}
+
+.wheel {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    background: #222;
+    border: 7px solid #555;
+    border-radius: 50%;
+}
+
+.w1 {
+    left: 25px;
+}
+
+.w2 {
+    right: 25px;
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: #555;
+    border-top: 5px solid #888;
+}
+
+.line {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    border-top: 4px dashed white;
+}
+
+@keyframes drive {
+    to {
+        left: calc(100% - 250px);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="road">
+    <div class="line"></div>
+</div>
+
+<div class="car">
+    <div class="roof"></div>
+    <div class="window"></div>
+    <div class="window2"></div>
+    <div class="body"></div>
+    <div class="wheel w1"></div>
+    <div class="wheel w2"></div>
+</div>
+
+</body>
+</html>
